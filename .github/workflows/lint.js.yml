@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: lint
-        run: npx eslint .
+        run: make lint
