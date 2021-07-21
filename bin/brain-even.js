@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 import { userNameQuery, gameProcess } from '../src/index.js';
 
 console.log('Welcome to the Brain Games!');
