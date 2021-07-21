@@ -10,9 +10,9 @@ export const gameProcess = (gameStartMessage, questionFunc, msgFunc, correctFunc
   console.log(gameStartMessage);
   let wins = 0;
   do {
-    const questionNumber = questionFunc();
-    const message = msgFunc(questionNumber);
-    const rightAnswer = correctFunc(questionNumber);
+    const question = questionFunc();
+    const message = msgFunc(question);
+    const rightAnswer = correctFunc(question);
     const userAnswer = readlineSync.question(message);
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
