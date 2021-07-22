@@ -13,22 +13,22 @@ const messageFunction = (arr) => `Question: ${arr[0]} ${arr[1]}\nYour answer: `;
 
 const rightAnswerFunction = (arr) => {
   const euclidus = (first, second) => {
-    let a = first;
-    let b = second;
-    if (a !== b && a % b !== 0 && b % a !== 0) {
-      if (a > b) {
-        a %= b;
-      } else { b %= a; }
+    let a = 0;
+    let b = 0;
+    if (first > second) {
+      a = first;
+      b = second;
+    } else {
+      a = second;
+      b = first;
+    }
+    if (a % b === 0) { return b; }
+    else {
+      a = a % b;
       return euclidus(a, b);
     }
-    if (a === b || a % b === 0 || b % a === 0) {
-      if (a >= b) { return `${a}`; }
-      return `${b}`;
-    }
-    if (a > b) { return `${b}`; }
-    return `${a}`;
   };
-  return euclidus(arr[0], arr[1]);
+  return `${euclidus(arr[0], arr[1])}`;
 };
 
 gameProcess(gameStartMessage, questionFunction, messageFunction, rightAnswerFunction, userName);
