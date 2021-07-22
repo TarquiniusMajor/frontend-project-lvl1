@@ -5,8 +5,8 @@ console.log('Welcome to the Brain Games!');
 const userName = userNameQuery();
 const gameStartMessage = 'Find the greatest common divisor of given numbers.';
 const questionFunction = () => {
-  const numOne = Math.round(Math.random() * 1000 + 1);
-  const numTwo = Math.round(Math.random() * 1000 + 1);
+  const numOne = Math.round(Math.random() * 100 + 1);
+  const numTwo = Math.round(Math.random() * 100 + 1);
   return [numOne, numTwo];
 };
 const messageFunction = (arr) => `Question: ${arr[0]} ${arr[1]}\nYour answer: `;
