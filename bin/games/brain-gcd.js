@@ -23,10 +23,9 @@ const rightAnswerFunction = (arr) => {
       b = first;
     }
     if (a % b === 0) { return b; }
-    else {
-      a = a % b;
-      return euclidus(a, b);
-    }
+
+    a %= b;
+    return euclidus(a, b);
   };
   return `${euclidus(arr[0], arr[1])}`;
 };
