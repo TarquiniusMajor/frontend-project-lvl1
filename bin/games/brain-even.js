@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { userNameQuery, gameProcess } from '../../src';
+import { userNameQuery, gameProcess } from '../../src/index.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = userNameQuery();
